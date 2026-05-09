@@ -1,7 +1,14 @@
+# Calculate Client Security Hash – Workflow Overview
+
+## Overview
+
+This UiPath automation processes WI5 work items from ACME System 1 and generates a Security Hash for each client using their details.
+
+The bot retrieves client information, generates a SHA1 hash, and updates the work item status to Completed with the generated hash.
 
 ---
 
-## Workflow Steps
+## Process Flow
 
 | Step | Description |
 |------|-------------|
@@ -11,7 +18,7 @@
 | 1.4 | Open the Work Items listing |
 | 1.5 | Process each WI5 activity |
 | 1.5.A | Open Work Item Details and retrieve Client Details |
-| 1.5.B | Generate SHA1 hash using:<br>`ClientID-ClientCountry` |
+| 1.5.B | Open SHA1 Generator and provide input:<br>`ClientID-ClientName-ClientCountry` |
 | 1.5.C | Retrieve generated Client Security Hash |
 | 1.5.D | Open Update Work Item page |
 | 1.5.E | Set status to **Completed** and add Security Hash in comments |
